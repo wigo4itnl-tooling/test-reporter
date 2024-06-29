@@ -160,7 +160,7 @@ export function getBadge(passed: number, failed: number, skipped: number, option
   const encodedBadgeTitle = encodeImgShieldsURIComponent(options.badgeTitle)
   const encodedMessage = encodeImgShieldsURIComponent(message)
   const encodedColor = encodeImgShieldsURIComponent(color)
-  return `[![${hint}](https://img.shields.io/badge/${encodedBadgeTitle}-${encodedMessage}-${encodedColor})](#test-report)`
+  return `[![${hint}](https://img.shields.io/badge/${encodedBadgeTitle}-${encodedMessage}-${encodedColor})](#user-content-test-report)`
 }
 
 function getTestRunsReport(testRuns: TestRunResult[], options: ReportOptions): string[] {
@@ -175,7 +175,7 @@ function getTestRunsReport(testRuns: TestRunResult[], options: ReportOptions): s
     sections.push(` `)
   }
 
-  sections.push('# <a name="test-report"></a> Tests report')
+  sections.push('# <a name="user-content-test-report"></a> Tests report')
 
   // Filter test runs based on list-files option
   const filteredTestRuns =

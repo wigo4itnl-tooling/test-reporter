@@ -57781,7 +57781,7 @@ function getBadge(passed, failed, skipped, options) {
     const encodedBadgeTitle = encodeImgShieldsURIComponent(options.badgeTitle);
     const encodedMessage = encodeImgShieldsURIComponent(message);
     const encodedColor = encodeImgShieldsURIComponent(color);
-    return `![${hint}](https://img.shields.io/badge/${encodedBadgeTitle}-${encodedMessage}-${encodedColor})`;
+    return `[![${hint}](https://img.shields.io/badge/${encodedBadgeTitle}-${encodedMessage}-${encodedColor})](#user-content-test-report)`;
 }
 function getTestRunsReport(testRuns, options) {
     const sections = [];
@@ -57792,6 +57792,7 @@ function getTestRunsReport(testRuns, options) {
         sections.push(`<details><summary>Expand for details</summary>`);
         sections.push(` `);
     }
+    sections.push('# <a name="user-content-test-report"></a> Tests report');
     // Filter test runs based on list-files option
     const filteredTestRuns = options.listFiles === 'failed'
         ? testRuns.filter(tr => tr.result === 'failed')
