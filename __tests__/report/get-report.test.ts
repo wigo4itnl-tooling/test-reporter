@@ -178,15 +178,15 @@ describe('getReport', () => {
       const integrationReport = getReport(results, {...commonOptions, name: 'Integration tests'})
 
       expect(unitReport).toContain(
-        '](#user-content-tr-run-Unittests-test-report)\n# <a name="user-content-tr-run-Unittests-test-report"></a> Tests report'
+        '](#user-content-tr-run-unittests-test-report)\n# <a name="user-content-tr-run-unittests-test-report"></a> Tests report'
       )
-      expect(unitReport).toContain('href="#user-content-tr-run-Unittests-r0"')
-      expect(unitReport).toContain('href="#user-content-tr-run-Unittests-r0s0"')
+      expect(unitReport).toContain('href="#user-content-tr-run-unittests-r0"')
+      expect(unitReport).toContain('href="#user-content-tr-run-unittests-r0s0"')
 
       expect(integrationReport).toContain(
-        '](#user-content-tr-run-Integrationtests-test-report)\n# <a name="user-content-tr-run-Integrationtests-test-report"></a> Tests report'
+        '](#user-content-tr-run-integrationtests-test-report)\n# <a name="user-content-tr-run-integrationtests-test-report"></a> Tests report'
       )
-      expect(integrationReport).not.toContain('user-content-tr-run-Unittests-')
+      expect(integrationReport).not.toContain('user-content-tr-run-unittests-')
     })
   })
 
