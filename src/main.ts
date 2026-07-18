@@ -208,6 +208,7 @@ class TestReporter {
       const summary = getReport(
         results,
         {
+          name,
           listSuites,
           listTests,
           slugPrefix,
@@ -242,6 +243,7 @@ class TestReporter {
       core.info('Creating report summary')
       baseUrl = createResp.data.html_url as string
       const summary = getReport(results, {
+        name,
         listSuites,
         listTests,
         slugPrefix,
